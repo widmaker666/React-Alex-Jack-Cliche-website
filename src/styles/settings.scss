@@ -1,0 +1,48 @@
+//* Fonts //
+@font-face {
+  font-family: "Big-title";
+  src: url("../../src/assets/fonts/BigShouldersStencilText-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Under-title";
+  src: url("../../src/assets/fonts/BigShouldersStencilText-Bold.ttf");
+}
+@font-face {
+  font-family: "Paragraph";
+  src: url("../../src/assets/fonts/YsabeauSC-VariableFont_wght.ttf ");
+}
+
+$big-title: "Big-title";
+$under-title: "Under-title";
+$paragraph: "Paragraph";
+
+//* Colors //
+
+//* ROOT OPTIONS //
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  user-select: none;
+}
+
+.circle {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+  background: rgb(255, 251, 0);
+  border: 2px solid white;
+  
+}
