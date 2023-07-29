@@ -1,21 +1,22 @@
 .main {
   width: 100%;
-  min-height: 100vh;
   height: 100vh;
-  cursor: none;
+  overflow: hidden;
 
   & .section-home {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    width: 100%;
     height: 100vh;
-    color: white;
-    position: relative;
+    color: white;    
 
     & .img-div {
       z-index: -1;
       position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
 
@@ -24,461 +25,87 @@
         height: 100%;
       }
     }
-    & .title-container {
+
+    & .first-title {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      justify-content: center;
-      height: 90%;
-      width: 100%;
+      align-items: center;
+      justify-content: flex-end;
+      width: 90%;
+      height: auto;
+      padding-right: 20px;
 
-      & .first-title {
-        display: flex;
-
-        align-items: center;
-        justify-content: end;
-        width: 100%;
-        height: auto;
-        padding-right: 15px;
-
-        & span {
-          text-transform: uppercase;
-          font-family: $paragraph;
-          font-size: 10rem;
-          font-weight: 200;
-          letter-spacing: 75px;
-          text-shadow: 3px 5px 12px rgba(255, 255, 255, 0.68);
-          &:hover {
-            color: darkmagenta;
-            transform: rotate(10deg);
-            transition: 0.5s ease-out;
-          }
-        }
-      }
-
-      & .under-title {
-        display: flex;
-        align-items: center;
-        width: 1620px;
-        height: 20px;
+      & span {
+        text-transform: uppercase;
+        font-family: $paragraph;
+        font-size: 10rem;
+        font-weight: 200;
+        letter-spacing: 25px;
         text-shadow: 3px 5px 12px rgba(255, 255, 255, 0.68);
-
-        & h2 {
-          font-family: $paragraph;
-          text-transform: capitalize;
-          font-size: 1rem;
-          letter-spacing: 8px;
-        }
-      }
-
-      & .second-title {
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        width: 100%;
-        height: auto;
-        padding-right: 15px;
-
-        & span {
-          text-transform: uppercase;
-          font-family: $paragraph;
-          font-size: 10rem;
-          font-weight: 200;
-          letter-spacing: 75px;
-          text-shadow: 3px 5px 12px rgba(255, 255, 255, 0.68);
-          &:hover {
-            color: darkorange;
-            transform: rotateY(-45deg);
-            transition: 0.5s ease-out;
-          }
-        }
-      }
-
-      & .third-title {
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        width: 100%;
-        height: auto;
-        padding-right: 15px;
-
-        & span {
-          text-transform: uppercase;
-          font-family: $paragraph;
-          font-size: 10rem;
-          font-weight: 200;
-          letter-spacing: 75px;
-          text-shadow: 3px 5px 12px rgba(255, 255, 255, 0.68);
-          &:hover {
-            color: lightskyblue;
-            transform: rotateX(45deg);
-            transition: 0.5s ease-out;
-          }
+        &:hover {
+          color: darkmagenta;
+          transform: rotate(10deg);
+          transition: 0.5s ease-out;
         }
       }
     }
-    & .enter {
-      position: absolute;
-      left: 250px;
-      bottom: 210px;
+
+    & .under-title {
       display: flex;
-      text-align: center;
-      justify-content: center;
       align-items: center;
-      gap: 5px;
+      width: 1160px;
+      height: 20px;
+      text-shadow: 3px 5px 12px rgba(255, 255, 255, 0.68);
 
-      border: 3px solid rgb(255, 255, 255);
-      border-radius: 5px;
-
-      width: 280px;
-      height: 120px;
-      transition: 0.5s ease;
-
-      &:hover {
-        background: rgb(255, 255, 255);
-        transition: 0.2s ease-out;
-        color: black;
-        border: 5px solid rgb(0, 0, 0);
-        box-shadow: -1px 2px 35px 6px rgba(255, 255, 255, 1);
-        -webkit-box-shadow: -1px 2px 35px 6px rgba(255, 255, 255, 1);
-        -moz-box-shadow: -1px 2px 35px 6px rgba(255, 255, 255, 1);
-      }
-
-      & #one {
+      & h2 {
         font-family: $paragraph;
-        font-weight: 200;
-        font-size: 3.5rem;
-        letter-spacing: 7px;
+        text-transform: capitalize;
+        font-size: 1rem;
+        letter-spacing: 8px;
+      }
+    }
+
+    & .second-title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      height: auto;
+      padding-right: 15px;
+
+      & span {
         text-transform: uppercase;
-        animation: myAnim1 5s linear 1s infinite normal forwards;
-        transition: 1s;
-        &:hover {
-          color: black;
-          animation: none;
-          transition: 0.2s ease-out;
-        }
-      }
-      @keyframes myAnim1 {
-        0% {
-          animation-timing-function: ease-in;
-          opacity: 1;
-          transform: translateY(-25px);
-          color: green;
-          transition: 1s;
-        }
-
-        24% {
-          opacity: 1;
-          color: green;
-        }
-
-        40% {
-          animation-timing-function: ease-in;
-          transform: translateY(-24px);
-          color: green;
-        }
-
-        65% {
-          animation-timing-function: ease-in;
-          transform: translateY(-12px);
-          color: green;
-        }
-
-        82% {
-          animation-timing-function: ease-in;
-          transform: translateY(-6px);
-          color: green;
-        }
-
-        93% {
-          animation-timing-function: ease-in;
-          transform: translateY(-4px);
-          color: green;
-        }
-
-        25%,
-        55%,
-        75%,
-        87% {
-          animation-timing-function: ease-out;
-          transform: translateY(0px);
-          color: green;
-        }
-
-        100% {
-          animation-timing-function: ease-out;
-          opacity: 1;
-          transform: translateY(0px);
-          color: green;
-          transition: 1s;
-        }
-      }
-      & #two {
         font-family: $paragraph;
+        font-size: 10rem;
         font-weight: 200;
-        font-size: 3.5rem;
-        letter-spacing: 7px;
-        text-transform: uppercase;
-        animation: myAnim2 3s linear 1.2s infinite normal forwards;
-        transition: 0.5s;
+        letter-spacing: 25px;
+        text-shadow: 3px 5px 12px rgba(255, 255, 255, 0.68);
         &:hover {
-          color: black;
-          animation: none;
-          transition: 0.2s ease-out;
+          color: darkorange;
+          transform: rotateY(-45deg);
+          transition: 0.5s ease-out;
         }
       }
-      @keyframes myAnim2 {
-        0% {
-          animation-timing-function: ease-in;
-          opacity: 1;
-          transform: translateY(-25px);
-          color: rgb(0, 92, 128);
-        }
+    }
 
-        24% {
-          opacity: 1;
-          color: rgb(0, 92, 128);
-        }
+    & .third-title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      height: auto;
+      padding-right: 15px;
 
-        40% {
-          animation-timing-function: ease-in;
-          transform: translateY(-24px);
-          color: rgb(0, 92, 128);
-        }
-
-        65% {
-          animation-timing-function: ease-in;
-          transform: translateY(-12px);
-          color: rgb(0, 92, 128);
-        }
-
-        82% {
-          animation-timing-function: ease-in;
-          transform: translateY(-6px);
-          color: rgb(0, 92, 128);
-        }
-
-        93% {
-          animation-timing-function: ease-in;
-          transform: translateY(-4px);
-          color: rgb(0, 92, 128);
-        }
-
-        25%,
-        55%,
-        75%,
-        87% {
-          animation-timing-function: ease-out;
-          transform: translateY(0px);
-          color: rgb(0, 92, 128);
-        }
-
-        100% {
-          animation-timing-function: ease-out;
-          opacity: 1;
-          transform: translateY(0px);
-          color: rgb(0, 92, 128);
-        }
-      }
-      & #three {
+      & span {
+        text-transform: uppercase;
         font-family: $paragraph;
+        font-size: 10rem;
         font-weight: 200;
-        font-size: 3.5rem;
-        letter-spacing: 7px;
-        text-transform: uppercase;
-        animation: myAnim3 3.5s linear 1.5s infinite normal forwards;
-        transition: 0.5s;
+        letter-spacing: 25px;
+        text-shadow: 3px 5px 12px rgba(255, 255, 255, 0.68);
         &:hover {
-          color: black;
-          animation: none;
-          transition: 0.2s ease-out;
-        }
-      }
-      @keyframes myAnim3 {
-        0% {
-          animation-timing-function: ease-in;
-          opacity: 1;
-          transform: translateY(-25px);
-          color: rgb(117, 0, 128);
-        }
-
-        24% {
-          opacity: 1;
-          color: rgb(117, 0, 128);
-        }
-
-        40% {
-          animation-timing-function: ease-in;
-          transform: translateY(-24px);
-          color: rgb(117, 0, 128);
-        }
-
-        65% {
-          animation-timing-function: ease-in;
-          transform: translateY(-12px);
-          color: rgb(117, 0, 128);
-        }
-
-        82% {
-          animation-timing-function: ease-in;
-          transform: translateY(-6px);
-          color: rgb(117, 0, 128);
-        }
-
-        93% {
-          animation-timing-function: ease-in;
-          transform: translateY(-4px);
-          color: rgb(117, 0, 128);
-        }
-
-        25%,
-        55%,
-        75%,
-        87% {
-          animation-timing-function: ease-out;
-          transform: translateY(0px);
-          color: rgb(117, 0, 128);
-        }
-
-        100% {
-          animation-timing-function: ease-out;
-          opacity: 1;
-          transform: translateY(0px);
-          color: rgb(117, 0, 128);
-        }
-      }
-      & #four {
-        font-family: $paragraph;
-        font-weight: 200;
-        font-size: 3.5rem;
-        letter-spacing: 7px;
-        text-transform: uppercase;
-        animation: myAnim4 4s linear 2s infinite normal forwards;
-        transition: 0.5s;
-        &:hover {
-          color: black;
-          animation: none;
-          transition: 0.2s ease-out;
-        }
-      }
-      @keyframes myAnim4 {
-        0% {
-          animation-timing-function: ease-in;
-          opacity: 1;
-          transform: translateY(-25px);
-          color: rgb(255, 229, 59);
-        }
-
-        24% {
-          opacity: 1;
-          color: rgb(255, 229, 59);
-        }
-
-        40% {
-          animation-timing-function: ease-in;
-          transform: translateY(-24px);
-          color: rgb(255, 229, 59);
-        }
-
-        65% {
-          animation-timing-function: ease-in;
-          transform: translateY(-12px);
-          color: rgb(255, 229, 59);
-        }
-
-        82% {
-          animation-timing-function: ease-in;
-          transform: translateY(-6px);
-          color: rgb(255, 229, 59);
-        }
-
-        93% {
-          animation-timing-function: ease-in;
-          transform: translateY(-4px);
-          color: rgb(255, 229, 59);
-        }
-
-        25%,
-        55%,
-        75%,
-        87% {
-          animation-timing-function: ease-out;
-          transform: translateY(0px);
-          color: rgb(255, 229, 59);
-        }
-
-        100% {
-          animation-timing-function: ease-out;
-          opacity: 1;
-          transform: translateY(0px);
-          color: rgb(128, 111, 0);
-        }
-      }
-      & #five {
-        font-family: $paragraph;
-        font-weight: 200;
-        font-size: 3.5rem;
-        letter-spacing: 7px;
-        text-transform: uppercase;
-        animation: myAnim5 4.5s linear 2.3s infinite normal forwards;
-        transition: 0.5s;
-        &:hover {
-          color: black;
-          animation: none;
-          transition: 0.2s ease-out;
-        }
-      }
-      @keyframes myAnim5 {
-        0% {
-          animation-timing-function: ease-in;
-          opacity: 1;
-          transform: translateY(-25px);
-          color: rgb(228, 65, 29);
-        }
-
-        24% {
-          opacity: 1;
-          color: rgb(228, 65, 29);
-        }
-
-        40% {
-          animation-timing-function: ease-in;
-          transform: translateY(-24px);
-          color: rgb(228, 65, 29);
-        }
-
-        65% {
-          animation-timing-function: ease-in;
-          transform: translateY(-12px);
-          color: rgb(228, 65, 29);
-        }
-
-        82% {
-          animation-timing-function: ease-in;
-          transform: translateY(-6px);
-          color: rgb(228, 65, 29);
-        }
-
-        93% {
-          animation-timing-function: ease-in;
-          transform: translateY(-4px);
-          color: rgb(228, 65, 29);
-        }
-
-        25%,
-        55%,
-        75%,
-        87% {
-          animation-timing-function: ease-out;
-          transform: translateY(0px);
-          color: rgb(228, 65, 29);
-        }
-
-        100% {
-          animation-timing-function: ease-out;
-          opacity: 1;
-          transform: translateY(0px);
-          color: rgb(228, 65, 29);
+          color: lightskyblue;
+          transform: rotateX(45deg);
+          transition: 0.5s ease-out;
         }
       }
     }
