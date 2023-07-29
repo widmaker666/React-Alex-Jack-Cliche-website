@@ -180,11 +180,10 @@
       bottom: 20px;
       right: 50%;
       transition: 1s ease;
-      box-shadow: 10px 10px 41px 0px rgba(255, 255, 255, 0.263);
+      box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.263);
 
       &:hover {
         cursor: pointer;
-        color: rgb(0, 200, 255);
         animation: chevronAnimation 2s ease 0s infinite normal forwards;
         transition: 0.3s ease;
       }
