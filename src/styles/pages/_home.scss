@@ -1,7 +1,7 @@
 .main {
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  cursor: crosshair;
 
   & .section-home {
     display: flex;
@@ -9,8 +9,9 @@
     justify-content: center;
     align-items: flex-end;
     width: 100%;
-    height: 100vh;
-    color: white;    
+    height: 100%;
+    color: white;
+    position: relative;
 
     & .img-div {
       z-index: -1;
@@ -30,9 +31,31 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      width: 90%;
+      width: 65%;
       height: auto;
-      padding-right: 20px;
+      margin-right: 20px;
+      position: relative;
+
+      &::after {
+        content: "";
+        z-index: -1;
+        width: 100%;
+        height: 80px;
+        top: 75px;
+        position: absolute;
+        background-image: linear-gradient(135deg, #3c8ce7 10%, #00eaff 100%);
+        transform: translateX(-160%);
+        transition: 1s linear;
+      }
+      &:hover::after {
+        transform: translateX(0%);
+        transition: 0.5s linear;
+        background-image: linear-gradient(135deg, #3c8ce7 10%, #00eaff 100%);
+        box-shadow: 10px 10px 41px 0px rgba(255, 255, 255, 0.75);
+        -webkit-box-shadow: 10px 10px 41px 0px rgba(255, 255, 255, 0.75);
+        -moz-box-shadow: 10px 10px 41px 0px rgba(255, 255, 255, 0.75);
+        border-radius: 5px;
+      }
 
       & span {
         text-transform: uppercase;
@@ -42,9 +65,9 @@
         letter-spacing: 25px;
         text-shadow: 3px 5px 12px rgba(255, 255, 255, 0.68);
         &:hover {
-          color: darkmagenta;
-          transform: rotate(10deg);
-          transition: 0.5s ease-out;
+          color: rgb(0, 0, 0);
+          transform: rotate(10deg) scale(1.5);
+          transition: 0.1s linear;
         }
       }
     }
@@ -68,9 +91,30 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      width: 100%;
+      width: 26%;
       height: auto;
-      padding-right: 15px;
+      margin-right: 20px;
+      position: relative;
+      &::after {
+        content: "";
+        z-index: -1;
+        width: 100%;
+        height: 80px;
+        top: 75px;
+        position: absolute;
+        background-image: linear-gradient(135deg, #65fdf0 10%, #1d6fa3 100%);
+        transform: translateX(-400%);
+        transition: 1s linear;
+      }
+      &:hover::after {
+        transform: translateX(0%);
+        transition: 0.5s linear;
+        background-image: linear-gradient(135deg, #65fdf0 10%, #1d6fa3 100%);
+        border-radius: 5px;
+        box-shadow: 10px 10px 41px 0px rgba(255, 255, 255, 0.75);
+        -webkit-box-shadow: 10px 10px 41px 0px rgba(255, 255, 255, 0.75);
+        -moz-box-shadow: 10px 10px 41px 0px rgba(255, 255, 255, 0.75);
+      }
 
       & span {
         text-transform: uppercase;
@@ -80,9 +124,9 @@
         letter-spacing: 25px;
         text-shadow: 3px 5px 12px rgba(255, 255, 255, 0.68);
         &:hover {
-          color: darkorange;
-          transform: rotateY(-45deg);
-          transition: 0.5s ease-out;
+          color: rgb(0, 0, 0);
+          transform: rotate(-10deg) scale(1.5);
+          transition: 0.1s linear;
         }
       }
     }
@@ -91,9 +135,31 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      width: 100%;
+      width: 40%;
       height: auto;
-      padding-right: 15px;
+      margin-top: 20px;
+      margin-right: 20px;
+      position: relative;
+      &::after {
+        content: "";
+        z-index: -1;
+        width: 100%;
+        height: 80px;
+        top: 75px;
+        position: absolute;
+        background-image: linear-gradient(135deg, #f0ff00 10%, #58cffb 100%);
+        transform: translateX(-300%);
+        transition: 1s linear;
+      }
+      &:hover::after {
+        transform: translateX(0%);
+        transition: 0.5s linear;
+        background-image: linear-gradient(135deg, #f0ff00 10%, #58cffb 100%);
+        border-radius: 5px;
+        box-shadow: 10px 10px 41px 0px rgba(255, 255, 255, 0.75);
+        -webkit-box-shadow: 10px 10px 41px 0px rgba(255, 255, 255, 0.75);
+        -moz-box-shadow: 10px 10px 41px 0px rgba(255, 255, 255, 0.75);
+      }
 
       & span {
         text-transform: uppercase;
@@ -103,9 +169,50 @@
         letter-spacing: 25px;
         text-shadow: 3px 5px 12px rgba(255, 255, 255, 0.68);
         &:hover {
-          color: lightskyblue;
+          color: rgb(0, 0, 0);
           transform: rotateX(45deg);
-          transition: 0.5s ease-out;
+          transition: 0.1s linear;
+        }
+      }
+    }
+    & svg {
+      position: absolute;
+      bottom: 20px;
+      right: 50%;
+      transition: 1s ease;
+      box-shadow: 10px 10px 41px 0px rgba(255, 255, 255, 0.263);
+
+      &:hover {
+        cursor: pointer;
+        color: rgb(0, 200, 255);
+        animation: chevronAnimation 2s ease 0s infinite normal forwards;
+        transition: 0.3s ease;
+      }
+      @keyframes chevronAnimation {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        10%,
+        30%,
+        50%,
+        70% {
+          transform: translateY(-8px);
+        }
+
+        20%,
+        40%,
+        60% {
+          transform: translateY(8px);
+        }
+
+        80% {
+          transform: translateY(6.4px);
+        }
+
+        90% {
+          transform: translateY(-6.4px);
         }
       }
     }

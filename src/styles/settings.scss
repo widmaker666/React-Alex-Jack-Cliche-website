@@ -38,13 +38,11 @@ body {
 .circle {
   z-index: 0;
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 20px;
+  height: 20px;
   border-radius: 100px;
-  border: 2px solid rgb(255, 0, 0);
-  box-shadow: 10px 5px 131px 17px rgba(250, 0, 0, 1);
-  -webkit-box-shadow: 10px 5px 131px 17px rgba(250, 0, 0, 1);
-  -moz-box-shadow: 10px 5px 131px 17px rgba(250, 0, 0, 1);
-  background: red;
+  box-shadow: 10px 10px 95px 68px rgba(25, 0, 163, 0.59);
   transform: translate(-50%, -50%);
+  transition: 0.1s linear;
+  filter: blur(6px);
 }
